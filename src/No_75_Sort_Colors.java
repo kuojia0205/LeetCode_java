@@ -1,5 +1,5 @@
 public class No_75_Sort_Colors {
-    public void sortColors(int[] nums)
+    public static void sortColors(int[] nums)
     {
         sort(nums, 0, nums.length-1);
     }
@@ -16,20 +16,22 @@ public class No_75_Sort_Colors {
 
     public static int partition(int[] nums, int lo, int hi)
     {
-        int i = lo;
-        int j = hi+1;
+        int i = lo+1;
+        int j = hi;
         int v = nums[lo];
 
         while(true)
         {
-            while(nums[++i]<v)
+            while(nums[i]<v)
             {
+                i++;
                 if(i == hi)
                     break;
             }
 
-            while(nums[--j]>v)
+            while(nums[j]>v)
             {
+                j--;
                 if(j == lo)
                     break;
             }
