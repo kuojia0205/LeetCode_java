@@ -1,10 +1,13 @@
-import java.util.List;
-
 public class Main {
     public static void main(String[] args)
     {
-        int[] input = {1,1,1,2,2,3};
+        char[][] input = {
+                        {'1', '1', '1', '1', '0'},
+                        {'1', '1', '0', '1', '0'},
+                        {'1', '1', '0', '0', '0'},
+                        {'0', '0', '0', '0', '0'}
+        };
         int k = 2;
-        List<Integer> ans = No_347_Top_K_Frequent_Elements.topKFrequent(input,k);
+        int ans = No_200_Number_of_Islands.numIslands(input);
     }
 }
